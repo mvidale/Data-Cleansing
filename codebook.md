@@ -1,21 +1,21 @@
 # Codebook for run_analysis.R
 
-|Variable | Description|
-|---------|------------|
-|x_train (df)            | X_train.txt data|
-|y_train (df)            | y_train.txt data|
-|x_test (df)             | X_test.txt data|
-|y_test (df)             | y_test.txt data|
-|activity_labels (df)    | activity_labels.txt data|
-|merged_activities (df)  | y_train and y_test rows|
-|x_merged (df)           | x_train and x_test rows|
-|x_merged (df)           | merged_activities and x_merged|
-|x_merged_mean_std (df)  | activities and mean and std column data|
-|subject_train (df)      | subject_train.txt data|
-|subject_test (df)       | subject_test.txt data|
-|subjects (df)           | subject_train and subject_test rows|
-|tidy (df)               | subjects and x_merged_mean_std columns|
-|aggregated_data (df)    | mean aggregated data grouped by subject and activity|
+|Variable |Type | Description|
+|---------|-----|------------|
+|x_train | (df)            | X_train.txt data|
+|y_train | (df)            | y_train.txt data|
+|x_test | (df)             | X_test.txt data|
+|y_test | (df)             | y_test.txt data|
+|activity_labels | (df)    | activity_labels.txt data|
+|merged_activities | (df)  | y_train and y_test rows|
+|x_merged | (df)           | x_train and x_test rows|
+|x_merged | (df)           | merged_activities and x_merged|
+|x_merged_mean_std | (df)  | activities and mean and std column data|
+|subject_train | (df)      | subject_train.txt data|
+|subject_test | (df)       | subject_test.txt data|
+|subjects | (df)           | subject_train and subject_test rows|
+|tidy | (df)               | subjects and x_merged_mean_std columns|
+|aggregated_data | (df)    | mean aggregated data grouped by subject and activity|
 
 ## SAMPLE OUTPUT
 
