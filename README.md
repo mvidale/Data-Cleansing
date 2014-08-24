@@ -3,7 +3,12 @@ Data-Cleansing
 
 The run_analysis.R script is used to load test and training data set, merge them
 and generate a tidy data set based on the first six fields containing the mean
-and standard deviation data. The structure of the script is as follows:
+and standard deviation data.
+
+The run_analysis.R script assumes that the "UCI HAR Dataset" has been extracted 
+and that run_analysis.R script is present in the "UCI HAR Dataset" folder.
+
+The structure of the script is as follows:
 
 (1) All the required training and test data files are loaded.
 
