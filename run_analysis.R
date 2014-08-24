@@ -1,10 +1,9 @@
-# Merges the training and the test sets to create one data set.
+## Merges the training and the test sets to create one data set.
+# load data files
 x_train <- read.table("./train/X_train.txt")
 y_train <- read.table("./train/y_train.txt")
-
 x_test <- read.table("./test/X_test.txt")
 y_test <- read.table("./test/y_test.txt")
-
 activity_labels <- read.table("./activity_labels.txt")
 
 # merge activities
@@ -19,7 +18,6 @@ x_merged <- cbind(merged_activities, x_merged)
 x_merged_mean_std <- x_merged[c(1:7)]
 
 # Uses descriptive activity names to name the activities in the data set
-#d <- merge(x_merged_mean_std, activity_labels, by = c("V1"), sort = FALSE)
 x_merged_mean_std$V1 <- activity_labels$V2[match(x_merged_mean_std$V1, activity_labels$V1)]
 
 # Appropriately labels the data set with descriptive variable names.
@@ -41,6 +39,8 @@ tidy <- cbind(subjects, x_merged_mean_std)
 
 # do aggregation
 aggregated_data <-aggregate(tidy[c(3:8)], by=list(Activity=tidy$Activity, Subject=tidy$Subject), FUN=mean)
+colnames(aggregated_data) <- c("Activity", "Subject", "mean.mean_X", "mean.mean_Y", "mean.mean_Z", "mean.std_X", "mean.std_Y", "mean.std_Z")
+
 
 # wrtie out data
 write.table(aggregated_data, file = "tidy.txt", row.name = FALSE)
